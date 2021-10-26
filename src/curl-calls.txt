@@ -1,0 +1,53 @@
+curl -v -H "Content-Type: application/json" -X POST \
+--data '{"name":"Abhi","password":"arunarya","email":"abhi@gmail.com","age":"4"}' \
+https://arung-task-manager.herokuapp.com/users
+
+
+
+curl -H "Content-Type: application/json" -X PATCH \
+--data '{"name":"Arun","password":"myagemyage","email":"appd@gmail.com","age":"30"}' \
+localhost:3001/users/605351b0a29cf283c687383c
+
+curl -H "Content-Type: application/json" -X POST \
+--data '{"password":"arunarun","email":"arun@gmail.com"}' \
+https://arung-task-manager.herokuapp.com/users/login
+
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDY0OGQwMjA0MmZjZjAwMWM2OWNjMDgiLCJpYXQiOjE2MTcyMDI0MzR9.GJ39QTHf-BazC-RLH4mcgWYwa8KNHD3EMFxnGC2oYUk" https://arung-task-manager.herokuapp.com/users/me
+
+6037b274f5100c5abd6bbab9
+
+curl -X DELETE -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDU5ZmNiNDQxNzE1OTcxNTA4ZTE4ZmIiLCJpYXQiOjE2MTY1MTAxMzJ9.dtZXK5E80LS-jQWtcIxDU7zvWbvGYMSFpAWI_GGHR6w"  localhost:3001/users/me
+
+
+
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDU5ZmNiNDQxNzE1OTcxNTA4ZTE4ZmIiLCJpYXQiOjE2MTY1MTAxMzJ9.dtZXK5E80LS-jQWtcIxDU7zvWbvGYMSFpAWI_GGHR6w" -H "Content-Type: application/json" -X POST \
+--data '{"description":"Arun G tasks 2"}' \
+localhost:3001/tasks
+curl -v  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDYxZTY5OThhZTgzYTUwMmE2ZTA3YmUiLCJpYXQiOjE2MTcwMzc4NjB9.8IJJ3LIJj7UdTlMpO-vvkcZOOpAzrq5X3_eNfMjJ4T4" localhost:3001/tasks
+
+curl -v localhost:3001/tasks/60535d0288d87b9f542e3484 
+
+curl -v -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDU5ZmNiNDQxNzE1OTcxNTA4ZTE4ZmIiLCJpYXQiOjE2MTY1MTAxMzJ9.dtZXK5E80LS-jQWtcIxDU7zvWbvGYMSFpAWI_GGHR6w" -X DELETE localhost:3001/tasks/6059fce241715971508e18fd
+
+
+curl -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDU5ZjliNTg2ZTgyYzY3ZDhlNmNkMjciLCJpYXQiOjE2MTY1MDkzNjV9.UJu1CNG-epiIgsADrWWYP54RpTsBDgTAiOU6mbWN4mM" -X PATCH \
+--data '{"name":"ashu prakash","password":"wyfdbossesss","email":"ashu@gmail.com","age":"20"}' \
+localhost:3001/users/me
+
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDU5ZmNiNDQxNzE1OTcxNTA4ZTE4ZmIiLCJpYXQiOjE2MTY1MTAxMzJ9.dtZXK5E80LS-jQWtcIxDU7zvWbvGYMSFpAWI_GGHR6w"  -H "Content-Type: application/json" -X PATCH \
+--data '{"completed":true}' \
+localhost:3001/tasks/6059fce241715971508e18fd
+
+
+
+-----
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDcwMzlhYTQxZDhjODAwMWM4ZmU0ZmIiLCJpYXQiOjE2MTc5Njc1MzB9.4DIu4BwbMJ0Vm4nn-mgcZbTsiaY-oViRkY3JR6I3le0" -H "Content-Type: application/json" -X POST \
+--data '{"description":"Arun G tasks 2"}' \
+https://arung-task-manager.herokuapp.com/tasks
+
+
+curl -v  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDcwMzlhYTQxZDhjODAwMWM4ZmU0ZmIiLCJpYXQiOjE2MTc5Njc1MzB9.4DIu4BwbMJ0Vm4nn-mgcZbTsiaY-oViRkY3JR6I3le0" https://arung-task-manager.herokuapp.com/tasks
+
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDcwMzlhYTQxZDhjODAwMWM4ZmU0ZmIiLCJpYXQiOjE2MTc5Njc1MzB9.4DIu4BwbMJ0Vm4nn-mgcZbTsiaY-oViRkY3JR6I3le0"  -H "Content-Type: application/json" -X PATCH \
+--data '{"completed":true}' \
+https://arung-task-manager.herokuapp.com/tasks/60703a4f41d8c8001c8fe4fe
